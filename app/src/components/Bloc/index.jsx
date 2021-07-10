@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-scroll';
 import Title from '../Title';
 import StyleBloc from './styled';
 import StyleButton from '../Button';
@@ -40,9 +41,11 @@ const Bloc = ({
       }
       {
         cta ? (
-          <StyleButton type="button">
-            {cta}
-          </StyleButton>
+          <Link to="form" spy smooth duration={500}>
+            <StyleButton type="button">
+              {cta}
+            </StyleButton>
+          </Link>
         ) : null
       }
     </div>

@@ -6,13 +6,9 @@ const StyleButton = styled.button`
   padding: 15px 35px;
   border-radius: 30px;
   color: ${colors.white};
-  background-color: ${colors.blue};
-  font-weight: 700;
-  transition: background-color .4s ease;
-
-  &:hover {
-    background-color: ${colors.darkBlue};
-  }
+  background: linear-gradient(180deg, ${colors.lightBlue} 0%, ${colors.blue} 100%);
+  font-size: 1.4rem;
+  font-weight: 900;
 `;
 
 export default StyleButton;

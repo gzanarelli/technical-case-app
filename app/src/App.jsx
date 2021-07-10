@@ -11,7 +11,7 @@ const App = () => (
       img="/header.png"
       title="Construire des campus apprenants"
       content="A quoi ressembleront les campus de demain ? Retour sur les révolutions numériques et pédagogiques qui bousculent aujourd’hui les établissements de l’enseignement supérieur pour découvrir comment ceux-ci effectuent leur transition vers des formats hybrides."
-      cta="Telecharger gratuitement"
+      cta="Télécharger gratuitement"
       catchPhrase="Livre blanc en libre accès"
       level="h1"
     />

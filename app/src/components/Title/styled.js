@@ -7,11 +7,11 @@ const StyleTitle = styled.h1`
   color: ${colors.darkBlue};
   font-size: ${(p) => {
     if (p.level === 'h1') {
-      return '5.5rem';
+      return '6rem';
     }
-    return '4rem';
+    return '3.6rem';
   }};
-  font-weight: 700;
+  font-weight: 900;
 `;
 
 export default StyleTitle;

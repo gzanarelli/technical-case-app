@@ -7,12 +7,13 @@ const StyleForm = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+
   form {
     padding: 50px;
     width: 50%;
     background-color: ${colors.white};
     border: 1;
-    border-radius: 20px;
+    border-radius: 45px;
     box-shadow: 0px 5px 25px 1px ${colors.grey30};
 
     label {
@@ -36,6 +37,11 @@ const StyleForm = styled.div`
           border-color: ${colors.grey};
         }
       }
+
+      .error {
+        margin-top: 5px;
+        color: ${colors.red};
+      }
     }
 
     p {
@@ -44,6 +50,10 @@ const StyleForm = styled.div`
 
       span {
         font-weight: 700;
+      }
+
+      a {
+        color: ${colors.blue};
       }
     }
     button {

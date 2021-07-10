@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Element } from 'react-scroll';
 import axios from '../../utils/axios';
 import Title from '../Title';
 import StyleForm from './styled';
@@ -23,7 +24,8 @@ const Form = () => {
       >
         Télécharger le livre blanc !
       </Title>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} id="form">
+        <Element name="form" />
         <label htmlFor="name">
           Votre nom*
           <input
@@ -31,7 +33,7 @@ const Form = () => {
             type="text"
             {...register('name', { required: true })}
           />
-          {errors.name?.type === 'required' && <span>Votre nom est requis</span>}
+          {errors.name?.type === 'required' && <span className="error">Votre nom est requis</span>}
         </label>
         <label htmlFor="organisation">
           Votre organisation*
@@ -40,7 +42,7 @@ const Form = () => {
             type="text"
             {...register('organisation', { required: true })}
           />
-          {errors.organisation?.type === 'required' && <span>Votre organisation est requise</span>}
+          {errors.organisation?.type === 'required' && <span className="error">Votre organisation est requise</span>}
         </label>
         <label htmlFor="jobTitle">
           Votre profession*
@@ -49,7 +51,7 @@ const Form = () => {
             type="text"
             {...register('job_title', { required: true })}
           />
-          {errors.job_title?.type === 'required' && <span>Votre profession est requise</span>}
+          {errors.job_title?.type === 'required' && <span className="error">Votre profession est requise</span>}
         </label>
         <label htmlFor="email">
           Votre adresse e-mail*
@@ -61,8 +63,8 @@ const Form = () => {
               pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
             })}
           />
-          {errors.email_address?.type === 'required' && <span>Votre e-mail est requis</span>}
-          {errors.email_address?.type === 'pattern' && <span>Votre e-mail est mal formattee</span>}
+          {errors.email_address?.type === 'required' && <span className="error">Votre e-mail est requis</span>}
+          {errors.email_address?.type === 'pattern' && <span className="error">Votre e-mail est mal formattee</span>}
         </label>
 
         <p>
@@ -70,7 +72,9 @@ const Form = () => {
           <span>
             gratuitement
           </span>
-          {' ? C’est par ici !'}
+          {' ? C’est par '}
+          <a href="https://www.wooclap.com/fr/" target="_blank" rel="noreferrer">ici</a>
+          {' ! '}
         </p>
 
         <StyleButton type="submit">
